@@ -16,7 +16,7 @@ public class MascotaController {
 	public Iface iFace;
 	
 	@GetMapping("/{id}")
-	public String mascotas(@PathVariable(value = "id")Long id) throws RestClientException, IOException {
+	public String mascotas(@PathVariable(value = "id")Long id)  {
 		try {
 			String consult = iFace.getDatos(id);
 			return consult;
