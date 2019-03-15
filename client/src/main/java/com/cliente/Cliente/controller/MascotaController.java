@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClientException;
 import com.cliente.Cliente.service.Iface;
+import org.springframework.cloud.client.loadbalancer.loadBalanced;
 
 @RestController
 public class MascotaController {
@@ -16,6 +17,7 @@ public class MascotaController {
 	public Iface iFace;
 	
 	@GetMapping("/{id}")
+	@LoadBalanced
 	public String mascotas(@PathVariable(value = "id")Long id)  {
 		try {
 			String consult = iFace.getDatos(id);
