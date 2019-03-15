@@ -17,7 +17,6 @@ public class MascotaController {
 	public Iface iFace;
 	
 	@GetMapping("/{id}")
-	@LoadBalanced
 	public String mascotas(@PathVariable(value = "id")Long id)  {
 		try {
 			String consult = iFace.getDatos(id);
