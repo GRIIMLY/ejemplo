@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "apiZuul")
 public interface Iface {
 	
-	@RequestMapping(method = RequestMethod.GET, value = "mascota/consulta/{id}")
+	@RequestMapping(method = RequestMethod.GET, value = "/mascota/consulta/{id}")
 	public String getDatos(@PathVariable (value = "id")Long id);
 }
