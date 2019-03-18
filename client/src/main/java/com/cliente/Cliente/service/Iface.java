@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name = "zuul-4-bxfbn:apiZuul")
+@FeignClient(name = "zuul-4-bxfbn")
 public interface Iface {
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/mascota/consulta/{id}")
