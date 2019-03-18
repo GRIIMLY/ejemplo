@@ -8,6 +8,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableAutoConfiguration
 public class ClienteApplication {
 
 	public static void main(String[] args) {
